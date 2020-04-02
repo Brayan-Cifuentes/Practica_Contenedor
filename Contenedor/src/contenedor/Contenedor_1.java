@@ -14,6 +14,10 @@ public class Contenedor_1 extends javax.swing.JFrame {
     /**
      * Creates new form Contenedor_1
      */
+    
+    private Mantenimiento_Maestros ventanaMaestros;
+    private RegistroAlumnos ventanaAlumnos;
+    
     public Contenedor_1() {
         initComponents();
     }
@@ -28,6 +32,12 @@ public class Contenedor_1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuAlumnos = new javax.swing.JMenuItem();
+        jMenuMaestros = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuSalida = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -35,32 +45,88 @@ public class Contenedor_1 extends javax.swing.JFrame {
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 714, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 506, Short.MAX_VALUE)
         );
+
+        jMenu1.setText("Catalogos");
+
+        jMenuAlumnos.setText("Mantenimiento Alumnos");
+        jMenuAlumnos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuAlumnosActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuAlumnos);
+
+        jMenuMaestros.setText("Mantenimiento Maestros");
+        jMenuMaestros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuMaestrosActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuMaestros);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Salida");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
+
+        jMenuSalida.setText("Salir del Sistema");
+        jMenuSalida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuSalidaActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuSalida);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(288, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(179, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAlumnosActionPerformed
+        // TODO add your handling code here:
+        ventanaAlumnos = new RegistroAlumnos();
+        jDesktopPane1.add(ventanaAlumnos);
+    }//GEN-LAST:event_jMenuAlumnosActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSalidaActionPerformed
+        // TODO add your handling code here:
+         dispose();
+    }//GEN-LAST:event_jMenuSalidaActionPerformed
+
+    private void jMenuMaestrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuMaestrosActionPerformed
+        // TODO add your handling code here:
+        //boton 
+        ventanaMaestros = new Mantenimiento_Maestros();
+        jDesktopPane1.add(ventanaMaestros);
+    }//GEN-LAST:event_jMenuMaestrosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,5 +165,11 @@ public class Contenedor_1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuItem jMenuAlumnos;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuMaestros;
+    private javax.swing.JMenuItem jMenuSalida;
     // End of variables declaration//GEN-END:variables
 }
